@@ -1,0 +1,971 @@
+Last login: Tue Apr 16 15:43:34 on console
+eroktopus@MacBook-Pro ~ % nvm install 16.19.0
+nvm use 16.19.0
+nvm alias default 16.19.0
+Downloading and installing node v16.19.0...
+Downloading https://nodejs.org/dist/v16.19.0/node-v16.19.0-darwin-x64.tar.xz...
+######################################################################### 100.0%
+Computing checksum with shasum -a 256
+Checksums matched!
+Now using node v16.19.0 (npm v8.19.3)
+Now using node v16.19.0 (npm v8.19.3)
+default -> 16.19.0 (-> v16.19.0)
+eroktopus@MacBook-Pro ~ % npm install -g expo-cli
+npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm WARN deprecated expo-cli@6.3.10: The global Expo CLI has been superseded by 'npx expo' and eas-cli –– Learn more: https://blog.expo.dev/the-new-expo-cli-f4250d8e3421
+
+added 1274 packages, and audited 1275 packages in 43s
+
+166 packages are looking for funding
+  run `npm fund` for details
+
+25 vulnerabilities (18 moderate, 7 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+eroktopus@MacBook-Pro ~ % expo login
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│   The global expo-cli package has been deprecated.                        │
+│                                                                           │
+│   The new Expo CLI is now bundled in your project in the expo package.    │
+│   Learn more: https://blog.expo.dev/the-new-expo-cli-f4250d8e3421.        │
+│                                                                           │
+│   To use the local CLI instead (recommended in SDK 46 and higher), run:   │
+│   › npx expo <command>                                                    │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+✔ Username/Email Address: … erik.emond@gmail.com
+✔ Password: … ************
+
+Success. You are now logged in as mystereroktopus.
+eroktopus@MacBook-Pro ~ % expo whoami
+┌───────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│   The global expo-cli package has been deprecated.                        │
+│                                                                           │
+│   The new Expo CLI is now bundled in your project in the expo package.    │
+│   Learn more: https://blog.expo.dev/the-new-expo-cli-f4250d8e3421.        │
+│                                                                           │
+│   To use the local CLI instead (recommended in SDK 46 and higher), run:   │
+│   › npx expo <command>                                                    │
+│                                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+Logged in as mystereroktopus
+eroktopus@MacBook-Pro ~ % cd eroktopus
+cd: no such file or directory: eroktopus
+eroktopus@MacBook-Pro ~ % cd users
+cd: no such file or directory: users
+eroktopus@MacBook-Pro ~ % cd careerfoundry
+eroktopus@MacBook-Pro careerfoundry % cd github
+eroktopus@MacBook-Pro github % npx create-expo-app hello-world --template
+Need to install the following packages:
+  create-expo-app@2.1.1
+Ok to proceed? (y) y
+✔ Choose a template: › Blank
+✔ Downloaded and extracted project files.
+> npm install
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'react-native@0.73.6',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/dev-middleware@0.73.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/debugger-frontend@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.73.21',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/assets-registry@0.73.1',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native-community/cli@12.3.6',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/community-cli-plugin@0.73.17',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/gradle-plugin@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/js-polyfills@0.73.1',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/virtualized-lists@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'deprecated-react-native-prop-types@5.0.0',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-runtime@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-source-map@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/metro-babel-transformer@0.73.15',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-config@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-core@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.73.21',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-babel-transformer@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-cache@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-cache-key@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-file-map@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-resolver@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-symbolicate@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-transform-plugins@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-transform-worker@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'ob1@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-minify-terser@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm WARN deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+npm WARN deprecated @babel/plugin-proposal-logical-assignment-operators@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
+
+added 1229 packages, and audited 1230 packages in 56s
+
+119 packages are looking for funding
+  run `npm fund` for details
+
+5 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+✅ Your project is ready!
+
+To run your project, navigate to the directory and run one of the following npm commands.
+
+- cd hello-world
+- npm run android
+- npm run ios
+- npm run web
+eroktopus@MacBook-Pro github % cd hello-world
+eroktopus@MacBook-Pro hello-world % npm start
+
+> hello-world@1.0.0 start
+> expo start
+
+Starting project at /Users/eroktopus/careerfoundry/GitHub/hello-world
+Starting Metro Bundler
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █▄▀▀▄▄▄▀█▄█ ▄▄▄▄▄ █
+█ █   █ ███▄█  ▀█▄█ █   █ █
+█ █▄▄▄█ ██▄▀▄▀ ██▀█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ █ ▀▄▀ ▀ █▄▄▄▄▄▄▄█
+█▄▄█  ▀▄▀█ ▄▄▀▀█▀ █▄█▀█▀▀▄█
+█▄  ▀  ▄▄ ▀  ▀█▄▄█▀███▄▀▀ █
+█ █▀ ▀▀▄██ █▄▄▀▄ █ ▄▀▀█▀ ██
+█ ▄▄▄▄█▄██   ▄▄▀ ▄▀ ██▄▀  █
+█▄█▄▄▄▄▄█▀  ▀▀  █ ▄▄▄  ▄▀▄█
+█ ▄▄▄▄▄ ██ ▄▄▀  █ █▄█ ██▀▄█
+█ █   █ █  ██▄██▄ ▄  ▄ █  █
+█ █▄▄▄█ █▀▄ █▄█  ▄█▀▀▄█   █
+█▄▄▄▄▄▄▄█▄▄▄█▄▄▄▄▄▄█▄▄███▄█
+
+› Metro waiting on exp://192.168.4.22:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press i │ open iOS simulator
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+
+Logs for your project will appear below. Press Ctrl+C to exit.
+› Opening on iOS...
+› Opening exp://192.168.4.22:8081 on iPhone SE (3rd generation)
+Downloading the Expo Go app [========================================] 100% 0.0
+
+
+› Press ? │ show all commands
+› Opening the iOS simulator, this might take a moment.
+iOS Bundled 8694ms (node_modules/expo/AppEntry.js)
+iOS Bundled 8580ms (node_modules/expo/AppEntry.js)
+iOS Bundled 70ms (node_modules/expo/AppEntry.js)
+ ERROR  TypeError: Cannot read property 'container' of undefined, js engine: hermes
+error: SyntaxError: /Users/eroktopus/careerfoundry/GitHub/hello-world/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (13:0)
+
+  11 |   );
+  12 |   <View style={styles.box}></View>
+> 13 | </View>;
+     | ^
+  14 | };
+  15 |
+  16 |
+ ERROR  [Error: TransformError SyntaxError: /Users/eroktopus/careerfoundry/GitHub/hello-world/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (13:0)
+
+  11 |   );
+  12 |   <View style={styles.box}></View>
+> 13 | </View>;
+     | ^
+  14 | };
+  15 |
+  16 |]
+error: SyntaxError: /Users/eroktopus/careerfoundry/GitHub/hello-world/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (8:6)
+
+   6 |     // <View style={styles.container}>
+   7 |       <Text style={styles.blue}>Hello World!</Text>
+>  8 |       <Text style={styles.bigRed}>How are you?</Text>
+     |       ^
+   9 |       <Text style={[styles.blue, styles.bigRed]}>I'm feeling blue!</Text>
+  10 |       <View style={styles.box}></View>
+  11 |     // </View>
+ ERROR  [Error: TransformError SyntaxError: /Users/eroktopus/careerfoundry/GitHub/hello-world/App.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (8:6)
+
+   6 |     // <View style={styles.container}>
+   7 |       <Text style={styles.blue}>Hello World!</Text>
+>  8 |       <Text style={styles.bigRed}>How are you?</Text>
+     |       ^
+   9 |       <Text style={[styles.blue, styles.bigRed]}>I'm feeling blue!</Text>
+  10 |       <View style={styles.box}></View>
+  11 |     // </View>]
+ ERROR  Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem., js engine: hermes
+ ERROR  Error: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem., js engine: hermes
+iOS Bundled 43ms (node_modules/expo/AppEntry.js)
+ ERROR  Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+ ERROR  TypeError: Cannot read property 'useState' of null, js engine: hermes
+ ERROR  Invariant Violation: "main" has not been registered. This can happen if:
+* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.
+* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called., js engine: hermes
+iOS Bundled 33ms (node_modules/expo/AppEntry.js)
+ ERROR  Warning: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.
+ ERROR  TypeError: Cannot read property 'useState' of null, js engine: hermes
+ ERROR  Invariant Violation: "main" has not been registered. This can happen if:
+* Metro (the local dev server) is run from the wrong folder. Check if Metro is running, stop it and restart it in the current project.
+* A module failed to load due to an error and `AppRegistry.registerComponent` wasn't called., js engine: hermes
+iOS Bundled 43ms (node_modules/expo/AppEntry.js)
+iOS Bundled 63ms (node_modules/expo/AppEntry.js)
+ ERROR  ReferenceError: Property 'Button' doesn't exist
+
+This error is located at:
+    in App (at withDevTools.ios.js:25)
+    in withDevTools(App) (at renderApplication.js:57)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:127)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:155)
+    in AppContainer (at renderApplication.js:50)
+    in main(RootComponent) (at renderApplication.js:67), js engine: hermes
+ ERROR  ReferenceError: Property 'Button' doesn't exist
+
+This error is located at:
+    in App (at withDevTools.ios.js:25)
+    in withDevTools(App) (at renderApplication.js:57)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:127)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:155)
+    in AppContainer (at renderApplication.js:50)
+    in main(RootComponent) (at renderApplication.js:67), js engine: hermes
+iOS Bundled 41ms (node_modules/expo/AppEntry.js)
+ ERROR  ReferenceError: Property 'Button' doesn't exist
+
+This error is located at:
+    in App (at withDevTools.ios.js:25)
+    in withDevTools(App) (at renderApplication.js:57)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:127)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:155)
+    in AppContainer (at renderApplication.js:50)
+    in main(RootComponent) (at renderApplication.js:67), js engine: hermes
+ ERROR  ReferenceError: Property 'Button' doesn't exist
+
+This error is located at:
+    in App (at withDevTools.ios.js:25)
+    in withDevTools(App) (at renderApplication.js:57)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:127)
+    in RCTView (at View.js:116)
+    in View (at AppContainer.js:155)
+    in AppContainer (at renderApplication.js:50)
+    in main(RootComponent) (at renderApplication.js:67), js engine: hermes
+ ERROR  ReferenceError: Property 'alertMyText' doesn't exist, js engine: hermes
+ ERROR  ReferenceError: Property 'alertMyText' doesn't exist, js engine: hermes
+ ERROR  ReferenceError: Property 'text' doesn't exist, js engine: hermes
+› Stopped server
+eroktopus@MacBook-Pro hello-world % npx create-expo-app eroktopus --template
+✖ Choose a template: › Blank
+
+Please specify the template, example: --template expo-template-blank
+
+eroktopus@MacBook-Pro hello-world % cd ..
+eroktopus@MacBook-Pro github % npx create-expo-app eroktopus --template
+✔ Choose a template: › Blank
+✔ Downloaded and extracted project files.
+> npm install
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'react-native@0.73.6',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/dev-middleware@0.73.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.75.0-main',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/debugger-frontend@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.73.21',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/assets-registry@0.73.1',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native-community/cli@12.3.6',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/community-cli-plugin@0.73.17',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/gradle-plugin@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/js-polyfills@0.73.1',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/virtualized-lists@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'deprecated-react-native-prop-types@5.0.0',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-runtime@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-source-map@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/metro-babel-transformer@0.73.15',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-config@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-core@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-preset@0.73.21',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-babel-transformer@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-cache@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-cache-key@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-file-map@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-resolver@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-symbolicate@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-transform-plugins@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-transform-worker@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'ob1@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'metro-minify-terser@0.80.8',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/babel-plugin-codegen@0.73.4',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: '@react-native/codegen@0.73.3',
+npm WARN EBADENGINE   required: { node: '>=18' },
+npm WARN EBADENGINE   current: { node: 'v16.19.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+npm WARN deprecated @npmcli/move-file@1.1.2: This functionality has been moved to @npmcli/fs
+npm WARN deprecated @babel/plugin-proposal-optional-catch-binding@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
+npm WARN deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+npm WARN deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+npm WARN deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+npm WARN deprecated @babel/plugin-proposal-logical-assignment-operators@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-logical-assignment-operators instead.
+npm WARN deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+npm WARN deprecated @babel/plugin-proposal-async-generator-functions@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
+npm WARN deprecated @babel/plugin-proposal-object-rest-spread@7.20.7: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-object-rest-spread instead.
+
+added 1229 packages, and audited 1230 packages in 38s
+
+119 packages are looking for funding
+  run `npm fund` for details
+
+5 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+✅ Your project is ready!
+
+To run your project, navigate to the directory and run one of the following npm commands.
+
+- cd eroktopus
+- npm run android
+- npm run ios
+- npm run web
+eroktopus@MacBook-Pro github % npm run ios
+npm ERR! Missing script: "ios"
+npm ERR! 
+npm ERR! To see a list of scripts, run:
+npm ERR!   npm run
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/eroktopus/.npm/_logs/2024-04-18T19_44_52_221Z-debug-0.log
+eroktopus@MacBook-Pro github % cd eroktopus
+eroktopus@MacBook-Pro eroktopus % npm run ios
+
+> eroktopus@1.0.0 ios
+> expo start --ios
+
+Starting project at /Users/eroktopus/careerfoundry/GitHub/eroktopus
+Starting Metro Bundler
+› Opening exp://192.168.4.22:8081 on iPhone SE (3rd generation)
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█ ▄▄▄▄▄ █▄▀▀▄▄▄▀█▄█ ▄▄▄▄▄ █
+█ █   █ ███▄█  ▀█▄█ █   █ █
+█ █▄▄▄█ ██▄▀▄▀ ██▀█ █▄▄▄█ █
+█▄▄▄▄▄▄▄█ █ ▀▄▀ ▀ █▄▄▄▄▄▄▄█
+█▄▄█  ▀▄▀█ ▄▄▀▀█▀ █▄█▀█▀▀▄█
+█▄  ▀  ▄▄ ▀  ▀█▄▄█▀███▄▀▀ █
+█ █▀ ▀▀▄██ █▄▄▀▄ █ ▄▀▀█▀ ██
+█ ▄▄▄▄█▄██   ▄▄▀ ▄▀ ██▄▀  █
+█▄█▄▄▄▄▄█▀  ▀▀  █ ▄▄▄  ▄▀▄█
+█ ▄▄▄▄▄ ██ ▄▄▀  █ █▄█ ██▀▄█
+█ █   █ █  ██▄██▄ ▄  ▄ █  █
+█ █▄▄▄█ █▀▄ █▄█  ▄█▀▀▄█   █
+█▄▄▄▄▄▄▄█▄▄▄█▄▄▄▄▄▄█▄▄███▄█
+
+› Metro waiting on exp://192.168.4.22:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press i │ open iOS simulator
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+
+Logs for your project will appear below. Press Ctrl+C to exit.
+iOS Bundled 9767ms (node_modules/expo/AppEntry.js)
+iOS Bundled 9483ms (node_modules/expo/AppEntry.js)
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  1 | import { StyleSheet, Text, View, Button } from "react-native";
+> 2 | import Screen1 from "./components/Screen1";
+    |                      ^
+  3 | import Screen2 from "./components/Screen2";
+  4 | import { NavigationContainer } from "@react-navigation/native";
+  5 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  1 | import { StyleSheet, Text, View, Button } from "react-native";
+> 2 | import Screen1 from "./components/Screen1";
+    |                      ^
+  3 | import Screen2 from "./components/Screen2";
+  4 | import { NavigationContainer } from "@react-navigation/native";
+  5 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  1 | import { StyleSheet, Text, View, Button } from "react-native";
+> 2 | import Screen1 from "./components/Screen1";
+    |                      ^
+  3 | import Screen2 from "./components/Screen2";
+  4 | import { NavigationContainer } from "@react-navigation/native";
+  5 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  1 | import { StyleSheet, Text, View, Button } from "react-native";
+> 2 | import Screen1 from "./components/Screen1";
+    |                      ^
+  3 | import Screen2 from "./components/Screen2";
+  4 | import { NavigationContainer } from "@react-navigation/native";
+  5 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  1 | import { StyleSheet, Text, View, Button } from "react-native";
+> 2 | import Screen1 from "./components/Screen1";
+    |                      ^
+  3 | import Screen2 from "./components/Screen2";
+  4 | import { NavigationContainer } from "@react-navigation/native";
+  5 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 | import { NavigationContainer } from "@react-navigation/native";
+  4 | import { createNativeStackNavigator } from "@react-navigation/native-stack";]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 |
+  4 | // import react Navigation]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 |
+  4 | // import react Navigation]
+Unable to resolve "./components/Screen1" from "App.js"
+ ERROR  [Error: undefined Unable to resolve module ./components/Screen1 from /Users/eroktopus/careerfoundry/GitHub/eroktopus/App.js: 
+
+None of these files exist:
+  * components/Screen1(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * components/Screen1/index(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+> 1 | import Screen1 from "./components/Screen1";
+    |                      ^
+  2 | import Screen2 from "./components/Screen2";
+  3 |
+  4 | // import react Navigation]
+iOS Bundling failed 6ms (node_modules/expo/AppEntry.js)
+Unable to resolve "./components/Screen1" from "App.js"
+› Stopped server
+eroktopus@MacBook-Pro eroktopus % \~/.zshrc
+zsh: no such file or directory: ~/.zshrc
+eroktopus@MacBook-Pro eroktopus % export ANDROID_SDK=/Users/eroktopus/Library/Android/sdk
+eroktopus@MacBook-Pro eroktopus % nano ~/.zshrc
+
+
+  UW PICO 5.09             File: /Users/eroktopus/.zshrc              Modified  
+
+export ANDROID_SDK=/Users/eroktopus/Library/Android/sdk
+source ~/.zshrc
+export PATH=$ANDROID_SDK/platform-tools:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This load$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
