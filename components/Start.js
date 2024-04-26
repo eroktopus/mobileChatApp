@@ -7,18 +7,35 @@ import {
   ImageBackground,
   TouchableOpacity,
 } from "react-native";
+import { getAuth, signInAnonymously } from "firebase/auth";
 
 // Start component
 const Start = ({ navigation }) => {
+  const auth = getAuth();
   // State variables for user name and selected background color
   const [name, setName] = useState("");
   const [background, setBackground] = useState("");
+
+  const signInUser = () => {
+    signInAnonymously(auth)
+      .then((result) => {
+        navigation.navigate("Chat", {
+          name: name,
+          backgroundColor: background,
+          id: result.user.uid, // Change userID to id
+        });
+      })
+      .catch((error) => {
+        console.error("Error signing in anonymously: ", error);
+        // Handle the error (e.g., show a message to the user)
+      });
+  };
 
   // Function to navigate to the Chat screen
   const goToChat = () => {
     navigation.navigate("Chat", {
       name: name,
-      backgroundColor: background,
+      backgroundColor: background, // Pass background color as backgroundColor
     });
   };
 
@@ -68,15 +85,14 @@ const Start = ({ navigation }) => {
           </View>
 
           {/* Button to start chat */}
-          <TouchableOpacity style={styles.button} onPress={goToChat}>
-            <Text style={styles.textButton}>Start Chat</Text>
+          <TouchableOpacity style={styles.button} onPress={signInUser}>
+            <Text style={styles.textButton}>Start Chatting</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
   );
 };
-
 // Styles for the Start component
 const styles = StyleSheet.create({
   // Outer container style
