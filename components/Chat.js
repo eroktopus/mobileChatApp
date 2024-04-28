@@ -1,111 +1,114 @@
-import { useState, useEffect } from "react";
-import { Bubble, GiftedChat, InputToolbar } from "react-native-gifted-chat";
-import { StyleSheet, View, Platform, KeyboardAvoidingView } from "react-native";
+import { useEffect, useState } from "react";
 import {
-  addDoc,
+  StyleSheet,
+  View,
+  KeyboardAvoidingView,
+  Platform,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+import { GiftedChat, Bubble, InputToolbar } from "react-native-gifted-chat";
+import {
   collection,
-  query,
-  orderBy,
+  addDoc,
   onSnapshot,
+  orderBy,
+  query,
 } from "firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const Chat = ({ route, db }) => {
-  // Receive Firestore db as prop
-  const { backgroundColor, name, id } = route.params;
+const Chat = ({ route, navigation, db, isConnected, storage }) => {
+  const { name, backgroundColor, id } = route.params;
   const [messages, setMessages] = useState([]);
+  let soundObject = null;
 
+  // Messages database
+  let unsubscribe;
+  useEffect(() => {
+    if (isConnected === true) {
+      // unregister current onSnapshot() listener to avoid registering multiple listeners when useEffect code is re-executed.
+      if (unsubscribe) unsubscribe();
+      unsubscribe = null;
+
+      const q = query(collection(db, "messages"), orderBy("createdAt", "desc"));
+      unsubscribe = onSnapshot(q, (documentSnapshot) => {
+        let newMessages = [];
+        documentSnapshot.forEach((doc) => {
+          newMessages.push({
+            _id: doc.id, // Use Firestore document ID as the unique identifier
+            text: doc.data().text,
+            createdAt: new Date(doc.data().createdAt.toMillis()),
+            user: doc.data().user,
+          });
+        });
+        cacheMessagesHistory(newMessages);
+        setMessages(newMessages);
+      });
+    } else loadCachedMessages();
+
+    // Clean up code
+    return () => {
+      if (unsubscribe) unsubscribe();
+      if (soundObject) soundObject.unloadAsync();
+    };
+  }, [isConnected]);
+
+  const loadCachedMessages = async () => {
+    const cachedMessages = (await AsyncStorage.getItem("chat_messages")) || [];
+    setMessages(JSON.parse(cachedMessages));
+  };
+
+  const cacheMessagesHistory = async (listsToCache) => {
+    try {
+      await AsyncStorage.setItem("chat_messages", JSON.stringify(listsToCache));
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const onSend = (newMessages) => {
+    addDoc(collection(db, "messages"), newMessages[0]);
+  };
+
+  // Customize speech bubble
   const renderBubble = (props) => {
     return (
       <Bubble
         {...props}
         wrapperStyle={{
           right: {
-            backgroundColor: "#000",
+            backgroundColor: "#757083",
           },
           left: {
-            backgroundColor: "#FFF",
+            backgroundColor: "lightgray",
           },
         }}
       />
     );
   };
 
+  // Prevent rendering of InputToolbar when offline
+  const renderInputToolbar = (props) => {
+    if (isConnected) return <InputToolbar {...props} />;
+    else return null;
+  };
+
+  // Set user name
   useEffect(() => {
-    const q = query(collection(db, "messages"), orderBy("createdAt", "desc"));
-    const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const newMessages = [];
-      querySnapshot.forEach((doc) => {
-        const { text, createdAt, user } = doc.data();
-        newMessages.push({
-          _id: doc.id,
-          text,
-          createdAt: createdAt.toDate(), // Convert Firestore Timestamp to Date
-          user,
-        });
-      });
-      setMessages(newMessages);
-    });
-
-    // Return a cleanup function to unsubscribe from the listener
-    return () => unsubscribe();
+    navigation.setOptions({ title: name });
   }, []);
-
-  // Custom InputToolbar component
-  const CustomInputToolbar = (props) => {
-    return (
-      <InputToolbar
-        {...props}
-        containerStyle={{
-          backgroundColor: "lightgray", // Background color of the input toolbar
-          borderTopColor: "navy", // Border color at the top of the input toolbar
-          borderTopWidth: 1, // Border width at the top of the input toolbar
-          paddingTop: 8, // Top padding
-        }}
-        primaryStyle={{
-          alignItems: "center", // Align items in the input toolbar
-        }}
-      />
-    );
-  };
-
-  const onSend = async (newMessages) => {
-    try {
-      if (newMessages && newMessages.length > 0) {
-        const firstMessage = newMessages[0];
-        console.log("First message:", firstMessage); // Log the first message object
-
-        if (firstMessage.user && firstMessage.user._id) {
-          console.log("User data:", firstMessage.user); // Log the user object
-          await addDoc(collection(db, "messages"), {
-            text: firstMessage.text,
-            createdAt: firstMessage.createdAt,
-            user: {
-              _id: firstMessage.user._id,
-              name: firstMessage.user.name,
-            },
-          });
-        } else {
-          console.error("Error: Invalid user data in message");
-        }
-      } else {
-        console.error("Error: Empty message array");
-      }
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
-  };
 
   return (
     <View style={[styles.container, { backgroundColor: backgroundColor }]}>
       <GiftedChat
         messages={messages}
         renderBubble={renderBubble}
+        renderInputToolbar={renderInputToolbar}
         onSend={(messages) => onSend(messages)}
         user={{
           _id: id,
           name,
         }}
-        renderInputToolbar={(props) => <CustomInputToolbar {...props} />}
       />
       {Platform.OS === "android" ? (
         <KeyboardAvoidingView behavior="height" />

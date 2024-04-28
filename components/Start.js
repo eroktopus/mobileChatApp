@@ -8,11 +8,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { getAuth, signInAnonymously } from "firebase/auth";
+import AsyncStorage from "@react-native-async-storage/async-storage"; // Import AsyncStorage for persistence
 
-// Start component
 const Start = ({ navigation }) => {
   const auth = getAuth();
-  // State variables for user name and selected background color
   const [name, setName] = useState("");
   const [background, setBackground] = useState("");
 
@@ -22,35 +21,22 @@ const Start = ({ navigation }) => {
         navigation.navigate("Chat", {
           name: name,
           backgroundColor: background,
-          id: result.user.uid, // Change userID to id
+          id: result.user.uid,
         });
       })
       .catch((error) => {
         console.error("Error signing in anonymously: ", error);
-        // Handle the error (e.g., show a message to the user)
       });
   };
 
-  // Function to navigate to the Chat screen
-  const goToChat = () => {
-    navigation.navigate("Chat", {
-      name: name,
-      backgroundColor: background, // Pass background color as backgroundColor
-    });
-  };
-
   return (
-    // Outer container to hold the entire content
     <View style={styles.outerContainer}>
-      {/* Background image */}
       <ImageBackground
         source={require("../image/Background Image.png")}
         resizeMode="cover"
         style={styles.image}
       >
-        {/* Inner container to center content vertically */}
         <View style={styles.innerContainer}>
-          {/* Text input for user to enter their name */}
           <Text>Hello World!</Text>
           <TextInput
             style={styles.textInput}
@@ -58,13 +44,9 @@ const Start = ({ navigation }) => {
             onChangeText={setName}
             placeholder="Type your username here"
           />
-          {/* Container for color selection */}
           <View style={styles.chooseColorBox}>
-            {/* Text indicating color selection */}
             <Text style={styles.chooseColorText}>Choose Background Color:</Text>
-            {/* Container for color buttons */}
             <View style={styles.colorButtonsContainer}>
-              {/* Render a TouchableOpacity for each color option */}
               <TouchableOpacity
                 style={[styles.chooseColor, { backgroundColor: "#494B4E" }]}
                 onPress={() => setBackground("#494B4E")}
@@ -83,8 +65,6 @@ const Start = ({ navigation }) => {
               ></TouchableOpacity>
             </View>
           </View>
-
-          {/* Button to start chat */}
           <TouchableOpacity style={styles.button} onPress={signInUser}>
             <Text style={styles.textButton}>Start Chatting</Text>
           </TouchableOpacity>
@@ -93,20 +73,17 @@ const Start = ({ navigation }) => {
     </View>
   );
 };
-// Styles for the Start component
+
 const styles = StyleSheet.create({
-  // Outer container style
   outerContainer: {
     flex: 1,
     backgroundColor: "#1A3986",
   },
-  // Inner container style
   innerContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
   },
-  // Text input style
   textInput: {
     width: "88%",
     padding: 15,
@@ -114,7 +91,6 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 15,
   },
-  // Image background style
   image: {
     flex: 1,
     width: "100%",
@@ -122,35 +98,29 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  // Container for color selection style
   chooseColorBox: {
     marginTop: 20,
     alignItems: "center",
   },
-  // Text style for color selection
   chooseColorText: {
     marginBottom: 10,
   },
-  // Container for color buttons style
   colorButtonsContainer: {
     flexDirection: "row",
     justifyContent: "center",
     marginBottom: 10,
   },
-  // Individual color button style
   chooseColor: {
     width: 50,
     height: 50,
     borderRadius: 25,
     marginHorizontal: 10,
   },
-  // Button style
   button: {
     backgroundColor: "#1A3986",
     padding: 10,
     borderRadius: 5,
   },
-  // Text style for button
   textButton: {
     color: "white",
     fontWeight: "bold",
