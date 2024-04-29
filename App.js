@@ -1,75 +1,75 @@
-import { useState, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
-  enableNetwork,
   disableNetwork,
+  enableNetwork,
 } from "firebase/firestore";
-import { Alert } from "react-native";
+import { getStorage } from "firebase/storage";
+import Start from "./components/Start"; // Importing the Start component
+import Chat from "./components/Chat"; // Importing the Chat component
+
 import { useNetInfo } from "@react-native-community/netinfo";
+import { useEffect } from "react";
+import { LogBox, Alert } from "react-native";
 
-// Import your components
-import Start from "./components/Start";
-import Chat from "./components/Chat";
+LogBox.ignoreLogs(["AsyncStorage has been extracted from"]); // Ignoring specific logs
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator(); // Creating a stack navigator
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCgj5ERTGOQb7oJfgoJq-7gBGmHYVuA-vM",
+  authDomain: "mobilechatapp-ff092.firebaseapp.com",
+  projectId: "mobilechatapp-ff092",
+  storageBucket: "mobilechatapp-ff092.appspot.com",
+  messagingSenderId: "636014727430",
+  appId: "1:636014727430:web:b0a53aed9160fb040f8e87",
+};
+
+const app = initializeApp(firebaseConfig); // Initializing Firebase app
+const db = getFirestore(app); // Getting Firestore instance
+const storage = getStorage(app); // Getting Firebase Storage instance
 
 const App = () => {
-  const connectionStatus = useNetInfo();
-  const [isConnected, setIsConnected] = useState(false); // Initialize to false
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCgj5ERTGOQb7oJfgoJq-7gBGmHYVuA-vM",
-    authDomain: "mobilechatapp-ff092.firebaseapp.com",
-    projectId: "mobilechatapp-ff092",
-    storageBucket: "mobilechatapp-ff092.appspot.com",
-    messagingSenderId: "636014727430",
-    appId: "1:636014727430:web:b0a53aed9160fb040f8e87",
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+  const connectionStatus = useNetInfo(); // Getting network connection status
 
   useEffect(() => {
-    setIsConnected(connectionStatus.isConnected);
-  }, [connectionStatus.isConnected]);
-
-  useEffect(() => {
-    if (isConnected === false) {
-      Alert.alert("Connection lost!");
+    // Effect hook to handle network connection changes
+    if (connectionStatus.isConnected === false) {
+      // If network is disconnected, show alert and disable network
+      Alert.alert("Connection Lost!");
       disableNetwork(db);
-    } else if (isConnected === true) {
+    } else if (connectionStatus.isConnected === true) {
+      // If network is connected, enable network
       enableNetwork(db);
     }
-  }, [isConnected]);
-
-  // Log isConnected
-  console.log("isConnected:", isConnected);
+  }, [connectionStatus.isConnected]); // Depend on connection status changes
 
   return (
+    // Main App component
     <NavigationContainer>
+      {/* Navigation container for managing navigation state */}
       <Stack.Navigator initialRouteName="Start">
+        {/* Stack navigator with initial route set to "Start" */}
         <Stack.Screen name="Start" component={Start} />
-        <Stack.Screen
-          name="Chat"
-          options={{ title: "Chat" }}
-          // Pass the navigation prop to the Chat component
-          children={({ navigation, route }) => (
+        {/* Screen for the Start component */}
+        <Stack.Screen name="Chat">
+          {/* Screen for the Chat component */}
+          {(props) => (
+            // Passing props to Chat component and rendering it
             <Chat
-              db={db}
-              isConnected={isConnected}
-              navigation={navigation}
-              route={route}
+              isConnected={connectionStatus.isConnected} // Passing network connection status
+              storage={storage} // Passing Firebase Storage instance
+              db={db} // Passing Firestore instance
+              {...props} // Passing other props
             />
           )}
-        />
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-export default App;
+export default App; // Exporting the main App component

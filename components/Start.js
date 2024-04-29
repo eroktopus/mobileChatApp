@@ -11,61 +11,77 @@ import { getAuth, signInAnonymously } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage"; // Import AsyncStorage for persistence
 
 const Start = ({ navigation }) => {
-  const auth = getAuth();
-  const [name, setName] = useState("");
-  const [background, setBackground] = useState("");
+  const auth = getAuth(); // Firebase authentication instance
+  const [name, setName] = useState(""); // State for user's name
+  const [background, setBackground] = useState(""); // State for selected background color
 
   const signInUser = () => {
+    // Function to sign in anonymously
     signInAnonymously(auth)
       .then((result) => {
+        // Navigate to Chat screen with user data
         navigation.navigate("Chat", {
-          name: name,
-          backgroundColor: background,
-          id: result.user.uid,
+          name: name, // Pass user's name
+          backgroundColor: background, // Pass selected background color
+          id: result.user.uid, // Pass user ID
         });
       })
       .catch((error) => {
+        // Handle sign-in error
         console.error("Error signing in anonymously: ", error);
       });
   };
 
   return (
     <View style={styles.outerContainer}>
+      {/* Outer container */}
       <ImageBackground
         source={require("../image/Background Image.png")}
         resizeMode="cover"
         style={styles.image}
       >
+        {/* Image background */}
         <View style={styles.innerContainer}>
+          {/* Inner container */}
           <Text>Hello World!</Text>
+          {/* Greeting text */}
           <TextInput
             style={styles.textInput}
             value={name}
             onChangeText={setName}
             placeholder="Type your username here"
           />
+          {/* Input for user's name */}
           <View style={styles.chooseColorBox}>
+            {/* Container for color selection */}
             <Text style={styles.chooseColorText}>Choose Background Color:</Text>
+            {/* Text indicating color selection */}
             <View style={styles.colorButtonsContainer}>
+              {/* Container for color buttons */}
               <TouchableOpacity
                 style={[styles.chooseColor, { backgroundColor: "#494B4E" }]}
                 onPress={() => setBackground("#494B4E")}
               ></TouchableOpacity>
+              {/* Button for selecting color */}
               <TouchableOpacity
                 style={[styles.chooseColor, { backgroundColor: "#6F8AC7" }]}
                 onPress={() => setBackground("#6F8AC7")}
               ></TouchableOpacity>
+              {/* Button for selecting color */}
               <TouchableOpacity
                 style={[styles.chooseColor, { backgroundColor: "#B3D791" }]}
                 onPress={() => setBackground("#B3D791")}
               ></TouchableOpacity>
+              {/* Button for selecting color */}
               <TouchableOpacity
                 style={[styles.chooseColor, { backgroundColor: "#E4D0E1" }]}
                 onPress={() => setBackground("#E4D0E1")}
               ></TouchableOpacity>
+              {/* Button for selecting color */}
             </View>
           </View>
           <TouchableOpacity style={styles.button} onPress={signInUser}>
+            {/* Button to start chatting */}
             <Text style={styles.textButton}>Start Chatting</Text>
           </TouchableOpacity>
         </View>
@@ -75,6 +91,7 @@ const Start = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  // Styles for components
   outerContainer: {
     flex: 1,
     backgroundColor: "#1A3986",
